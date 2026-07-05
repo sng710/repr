@@ -4405,45 +4405,33 @@ dialog[open].is-open {
 }
 
 
-/* ===== Color-only variant: option-3-dark-cream ===== */
+/* ===== Variant colors ONLY for the 3 central boxes + their popups ===== */
 :root{
-  --variant-page-bg:#ddd1c3;
-  --variant-page-bg-2:#c8b9a7;
-  --variant-page-glow:rgba(118,93,67,.10);
-  --variant-card-bg-1:#ede3d6;
-  --variant-card-bg-2:#dccdbb;
-  --variant-card-glow:rgba(126,98,71,.10);
+  --variant-card-bg-1:#e7dbcd;
+  --variant-card-bg-2:#d6c6b3;
+  --variant-card-glow:rgba(126,98,71,.12);
   --variant-line:rgba(116,89,62,.26);
-  --variant-accent:#2f241d;
-  --variant-badge:rgba(255,255,255,.55);
+  --variant-accent:#32261f;
+  --variant-preview:rgba(255,255,255,.54);
+  --variant-badge:rgba(255,255,255,.45);
+  --variant-modal-bg-1:#e6dacd;
+  --variant-modal-bg-2:#d0bfab;
 }
 
-/* only external background + the three center boxes */
-.final-black-page .site-shell{
-  background:
-    radial-gradient(circle at 20% 0%, var(--variant-page-glow), transparent 26rem),
-    radial-gradient(circle at 85% 14%, var(--variant-page-glow), transparent 22rem),
-    linear-gradient(180deg, var(--variant-page-bg), var(--variant-page-bg-2)) !important;
-}
-.final-black-page .memory-hub-section,
-.final-black-page .ribbon-cards-section{
-  background: transparent !important;
-}
+/* ONLY the 3 ribbon boxes */
 .final-black-page .atelier-card,
 .final-black-page .atelier-gallery-card,
 .final-black-page .atelier-texts-card,
 .final-black-page .atelier-farewell-card{
   background:
-    radial-gradient(circle at top, var(--variant-card-glow), transparent 42%),
+    radial-gradient(circle at 50% -10%, var(--variant-card-glow), transparent 42%),
     linear-gradient(180deg, var(--variant-card-bg-1), var(--variant-card-bg-2)) !important;
   border-color: var(--variant-line) !important;
-  box-shadow:
-    0 20px 54px rgba(0,0,0,.18),
-    inset 0 1px 0 rgba(255,255,255,.05) !important;
+  box-shadow: 0 20px 54px rgba(0,0,0,.24), inset 0 1px 0 rgba(255,255,255,.05) !important;
 }
 .final-black-page .atelier-card::before{
   background:
-    linear-gradient(135deg, rgba(255,255,255,.04), transparent 34%),
+    linear-gradient(135deg, rgba(255,255,255,.06), transparent 34%),
     radial-gradient(circle at bottom left, var(--variant-card-glow), transparent 34%) !important;
 }
 .final-black-page .atelier-card:hover{
@@ -4454,28 +4442,48 @@ dialog[open].is-open {
 .final-black-page .atelier-index{
   border-color: var(--variant-line) !important;
 }
-.final-black-page .atelier-card-title,
-.final-black-page .atelier-index{
-  background: var(--variant-badge) !important;
-}
-.final-black-page .atelier-card-title,
-.final-black-page .atelier-index,
-.final-black-page .atelier-card .atelier-index{
-  color: var(--variant-accent) !important;
-}
 .final-black-page .atelier-preview{
   background:
     linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)),
-    rgba(255,255,255,.06) !important;
+    var(--variant-preview) !important;
 }
-.final-black-page .atelier-title,
-.final-black-page .atelier-card-bottom .atelier-title,
-.final-black-page .atelier-card-bottom .atelier-body,
-.final-black-page .atelier-card-bottom .atelier-link,
-.final-black-page .atelier-card-top .atelier-label{
+.final-black-page .atelier-card-title,
+.final-black-page .atelier-index,
+.final-black-page .atelier-link{
+  background: var(--variant-badge) !important;
+  color: var(--variant-accent) !important;
+  border-color: var(--variant-line) !important;
+}
+.final-black-page .atelier-pages-preview img,
+.final-black-page .atelier-docs-preview img,
+.final-black-page .atelier-gallery-main,
+.final-black-page .atelier-gallery-thumb{
+  border-color: var(--variant-line) !important;
+}
+
+/* ONLY the related popups/dialogs */
+.final-black-page .memory-modal-dialog{
+  background: linear-gradient(180deg, var(--variant-modal-bg-1), var(--variant-modal-bg-2)) !important;
+  border-color: var(--variant-line) !important;
+}
+.final-black-page .memory-modal-head h3,
+.final-black-page .memory-modal-close,
+.final-black-page .caption-bar strong,
+.final-black-page .caption-bar span{
   color: var(--variant-accent) !important;
 }
-.final-black-page .atelier-link{
+.final-black-page .memory-modal-close{
   border-color: var(--variant-line) !important;
   background: var(--variant-badge) !important;
+}
+.final-black-page .photo-frame,
+.final-black-page .writing-card,
+.final-black-page .doc-preview-card,
+.final-black-page .photo-frame::after,
+.final-black-page .ornate-frame::after{
+  border-color: var(--variant-line) !important;
+}
+.final-black-page .caption-bar{
+  background: var(--variant-badge) !important;
+  border-color: var(--variant-line) !important;
 }
