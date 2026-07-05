@@ -1,1 +1,1 @@
-4 color-only variants bundle for GitHub Pages.
+4 variants with color changes only on the 3 ribbon boxes and their popups.
