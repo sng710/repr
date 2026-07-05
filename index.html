@@ -3,32 +3,183 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>5 חלופות צבע — לקופסאות ולפופ־אפים בלבד</title>
+  <title>כל חלופות הצבע — עמוד זיכרון</title>
   <style>
-    :root{--bg:#0b0b0b;--panel:#151515;--line:rgba(214,184,145,.26);--text:#f4ede5;--soft:#d8c3a8}
-    *{box-sizing:border-box} body{margin:0;font-family:Assistant,Arial,sans-serif;background:radial-gradient(circle at top, rgba(214,184,145,.08), transparent 34%), var(--bg);color:var(--text)}
-    .wrap{max-width:1240px;margin:0 auto;padding:48px 24px 70px}
-    h1{margin:0 0 10px;font-size:clamp(2rem,4vw,3.4rem)}
-    .lead{max-width:900px;color:#e4d7c8;line-height:1.85;margin:0 0 26px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
-    .card{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.015)),var(--panel);border:1px solid var(--line);border-radius:26px;padding:22px;display:flex;flex-direction:column;gap:12px;min-height:250px;box-shadow:0 18px 46px rgba(0,0,0,.28)}
-    .num{inline-size:44px;block-size:44px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);color:var(--soft);font-weight:800}
-    .title{font-size:1.42rem;font-weight:800}.desc{color:#ddd0c0;flex:1;line-height:1.8}.btn{display:inline-flex;justify-content:center;align-items:center;padding:12px 18px;border-radius:999px;border:1px solid var(--line);color:var(--text);text-decoration:none;background:rgba(255,255,255,.03);font-weight:800}.btn:hover{background:rgba(214,184,145,.08)}
-    .note{margin-top:28px;padding:16px 18px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.02);color:#d9cab8}
+    :root {
+      --bg:#0b0b0b;
+      --panel:#151515;
+      --panel2:#1b1a18;
+      --line:rgba(214,184,145,.26);
+      --text:#f4ede5;
+      --soft:#d8c3a8;
+      --muted:#bba995;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0;
+      font-family:Assistant, Arial, sans-serif;
+      background:
+        radial-gradient(circle at 16% 0%, rgba(214,184,145,.10), transparent 34rem),
+        radial-gradient(circle at 90% 8%, rgba(255,255,255,.05), transparent 28rem),
+        var(--bg);
+      color:var(--text);
+    }
+    .wrap {
+      max-width:1280px;
+      margin:0 auto;
+      padding:48px 24px 72px;
+    }
+    h1 {
+      margin:0 0 10px;
+      font-size:clamp(2rem,4vw,3.4rem);
+      line-height:1.12;
+      font-weight:850;
+    }
+    .lead {
+      max-width:940px;
+      color:#e4d7c8;
+      line-height:1.85;
+      margin:0 0 26px;
+      font-size:1.05rem;
+    }
+    .count {
+      display:inline-flex;
+      align-items:center;
+      gap:.45rem;
+      margin:0 0 20px;
+      padding:.62rem .95rem;
+      border:1px solid var(--line);
+      border-radius:999px;
+      color:var(--soft);
+      background:rgba(255,255,255,.025);
+      font-weight:800;
+    }
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+      gap:20px;
+      align-items:stretch;
+    }
+    .card {
+      background:
+        linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.015)),
+        var(--panel);
+      border:1px solid var(--line);
+      border-radius:26px;
+      padding:22px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      min-height:250px;
+      box-shadow:0 18px 46px rgba(0,0,0,.28);
+    }
+    .old-card {
+      background:
+        linear-gradient(180deg,rgba(255,255,255,.028),rgba(255,255,255,.012)),
+        var(--panel2);
+    }
+    .num {
+      inline-size:44px;
+      block-size:44px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      border:1px solid var(--line);
+      color:var(--soft);
+      font-weight:850;
+      direction:ltr;
+    }
+    .title {
+      font-size:1.42rem;
+      line-height:1.25;
+      font-weight:850;
+    }
+    .desc {
+      color:#ddd0c0;
+      flex:1;
+      line-height:1.8;
+    }
+    .btn {
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+      padding:12px 18px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      color:var(--text);
+      text-decoration:none;
+      background:rgba(255,255,255,.03);
+      font-weight:850;
+    }
+    .btn:hover { background:rgba(214,184,145,.08); }
+    .note {
+      margin-top:28px;
+      padding:16px 18px;
+      border-radius:18px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.02);
+      color:#d9cab8;
+      line-height:1.8;
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <h1>חמש חלופות צבע — רק לקופסאות ולפופ־אפים</h1>
-    <p class="lead">כל 5 החלופות כאן שומרות על אותו העיצוב בדיוק. ההבדלים הם <strong>רק</strong> בצבע הרקע של 3 הקופסאות המרכזיות (גלריית תמונות / טקסטים / דברי פרידה) ובצבעים של הפופ־אפים שלהן.</p>
+    <h1>כל חלופות הצבע לעמוד הזיכרון</h1>
+    <p class="lead">בדקתי את הריפו המצורף ועדכנתי את עמוד הבית כך שהוא מציג את כל תיקיות החלופות שנמצאות בו. חמש החלופות הראשונות הן הגרסאות הנוכחיות, ואחריהן מופיעות גם החלופות הנוספות שכבר היו בתיקייה.</p>
+    <div class="count">נמצאו 8 חלופות</div>
     <div class="grid">
-      <article class="card"><div class="num">01</div><div class="title">שחור מקורי</div><div class="desc">הקופסאות והפופ־אפים בגוון הכהה המקורי.</div><a class="btn" href="option-1-original-black/index.html">לצפייה</a></article>
-      <article class="card"><div class="num">02</div><div class="title">לבן נקי</div><div class="desc">רק הקופסאות והפופ־אפים בגוון לבן־שמנת נקי.</div><a class="btn" href="option-2-clean-white/index.html">לצפייה</a></article>
-      <article class="card"><div class="num">03</div><div class="title">קרם כהה</div><div class="desc">רק הקופסאות והפופ־אפים בגוון קרם כהה ומעודן.</div><a class="btn" href="option-3-dark-cream/index.html">לצפייה</a></article>
-      <article class="card"><div class="num">04</div><div class="title">טאופ רך</div><div class="desc">רק הקופסאות והפופ־אפים בגוון טאופ חמים ורך.</div><a class="btn" href="option-4-soft-taupe/index.html">לצפייה</a></article>
-      <article class="card"><div class="num">05</div><div class="title">גוונים בהירים שונים</div><div class="desc">שלוש הקופסאות מקבלות גוונים בהירים שונים: גלריה בגוון חמים, טקסטים בכחול־אפרפר עדין, ודברי פרידה בלילך רך.</div><a class="btn" href="option-5-light-mixed-boxes/index.html">לצפייה</a></article>
+      <article class="card">
+        <div class="num">01</div>
+        <div class="title">שחור מקורי</div>
+        <div class="desc">הקופסאות והפופ־אפים בגוון הכהה המקורי.</div>
+        <a class="btn" href="option-1-original-black/index.html">לצפייה</a>
+      </article>
+      <article class="card">
+        <div class="num">02</div>
+        <div class="title">לבן נקי</div>
+        <div class="desc">רק הקופסאות והפופ־אפים בגוון לבן־שמנת נקי.</div>
+        <a class="btn" href="option-2-clean-white/index.html">לצפייה</a>
+      </article>
+      <article class="card">
+        <div class="num">03</div>
+        <div class="title">קרם כהה</div>
+        <div class="desc">רק הקופסאות והפופ־אפים בגוון קרם כהה ומעודן.</div>
+        <a class="btn" href="option-3-dark-cream/index.html">לצפייה</a>
+      </article>
+      <article class="card">
+        <div class="num">04</div>
+        <div class="title">טאופ רך</div>
+        <div class="desc">רק הקופסאות והפופ־אפים בגוון טאופ חמים ורך.</div>
+        <a class="btn" href="option-4-soft-taupe/index.html">לצפייה</a>
+      </article>
+      <article class="card">
+        <div class="num">05</div>
+        <div class="title">גוונים בהירים שונים</div>
+        <div class="desc">שלוש הקופסאות מקבלות גוונים בהירים שונים: גלריה בגוון חמים, טקסטים בכחול־אפרפר עדין, ודברי פרידה בלילך רך.</div>
+        <a class="btn" href="option-5-light-mixed-boxes/index.html">לצפייה</a>
+      </article>
+      <article class="card old-card">
+        <div class="num">06</div>
+        <div class="title">קרם כהה — גרסה נוספת</div>
+        <div class="desc">חלופה נוספת שנמצאה בריפו הקיים.</div>
+        <a class="btn" href="option-1-dark-cream/index.html">לצפייה</a>
+      </article>
+      <article class="card old-card">
+        <div class="num">07</div>
+        <div class="title">שנהב רך</div>
+        <div class="desc">חלופה נוספת שנמצאה בריפו הקיים.</div>
+        <a class="btn" href="option-3-soft-ivory/index.html">לצפייה</a>
+      </article>
+      <article class="card old-card">
+        <div class="num">08</div>
+        <div class="title">גרייז׳ חם</div>
+        <div class="desc">חלופה נוספת שנמצאה בריפו הקיים.</div>
+        <a class="btn" href="option-4-warm-greige/index.html">לצפייה</a>
+      </article>
     </div>
-    <div class="note">מוכן ל־GitHub Pages. כל חלופה נמצאת בתיקייה עצמאית, עם index.html, gallery.html ו־assets.</div>
+    <div class="note">כדי לעדכן את הריפו: להחליף רק את קובץ <strong>index.html</strong> הראשי. שאר התיקיות יכולות להישאר כמו שהן.</div>
   </div>
 </body>
 </html>
