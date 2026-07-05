@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>עמודי זיכרון — 4 חלופות</title>
+  <style>
+    :root{
+      --bg:#0b0b0b; --panel:#141414; --panel2:#1b1b1b; --line:rgba(214,184,145,.26);
+      --text:#f6efe7; --soft:#d8c3a8; --muted:#b7a58f;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Assistant,Arial,sans-serif;background:radial-gradient(circle at top, rgba(214,184,145,.10), transparent 32%), var(--bg);color:var(--text)}
+    .wrap{max-width:1180px;margin:0 auto;padding:48px 24px 64px}
+    h1{margin:0 0 10px;font-size:clamp(2rem,4vw,3.35rem);font-weight:700}
+    .lead{max-width:760px;color:#e5d8c8;font-size:1.08rem;line-height:1.85;margin:0 0 28px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:18px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.015)),var(--panel);border:1px solid var(--line);border-radius:26px;padding:22px;display:flex;flex-direction:column;gap:12px;min-height:240px;box-shadow:0 18px 46px rgba(0,0,0,.3)}
+    .num{inline-size:44px;block-size:44px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);color:var(--soft);font-weight:700}
+    .title{font-size:1.5rem;font-weight:700;line-height:1.2}
+    .desc{color:#ddd0c0;line-height:1.8;font-size:.98rem;flex:1}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:999px;border:1px solid var(--line);color:var(--text);text-decoration:none;background:rgba(255,255,255,.03);font-weight:700}
+    .btn:hover{background:rgba(214,184,145,.08)}
+    .note{margin-top:28px;padding:16px 18px;border:1px solid var(--line);border-radius:18px;color:#d9cab8;background:rgba(255,255,255,.02)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>ארבע חלופות לעמוד הזיכרון</h1>
+    <p class="lead">כאן מרוכזות ארבע גרסאות מלאות, כל אחת בתוך תיקייה נפרדת ועצמאית, מוכנה ל־GitHub Pages. כל כפתור פותח את עמוד הבית של החלופה, ומתוכה אפשר להמשיך גם לגלריה.</p>
+    <div class="grid">
+      <article class="card">
+        <div class="num">01</div>
+        <div class="title">חלופה 1 — קרם כהה</div>
+        <div class="desc">אווירה חמה, מכובדת ורכה יותר, עם טון קרמי עמוק ומאופק.</div>
+        <a class="btn" href="option-1-dark-cream/index.html">לצפייה בחלופה</a>
+      </article>
+      <article class="card">
+        <div class="num">02</div>
+        <div class="title">חלופה 2 — לבן נקי</div>
+        <div class="desc">מראה חד ובהיר יותר, מינימליסטי ונקי, עם שפה בהירה ומעודנת.</div>
+        <a class="btn" href="option-2-clean-white/index.html">לצפייה בחלופה</a>
+      </article>
+      <article class="card">
+        <div class="num">03</div>
+        <div class="title">חלופה 3 — שנהב רך</div>
+        <div class="desc">גרסה רכה מאוד עם גוון שנהב חמים, אלגנטי ומאוזן.</div>
+        <a class="btn" href="option-3-soft-ivory/index.html">לצפייה בחלופה</a>
+      </article>
+      <article class="card">
+        <div class="num">04</div>
+        <div class="title">חלופה 4 — גרייז׳ חם</div>
+        <div class="desc">מראה מעט עמוק יותר, עם נוכחות חמימה ואחידה שמתאימה לאווירת זיכרון.</div>
+        <a class="btn" href="option-4-warm-greige/index.html">לצפייה בחלופה</a>
+      </article>
+    </div>
+    <div class="note">המבנה מוכן כך שאפשר להעלות את כל התיקייה ל־GitHub Pages. קובץ <strong>index.html</strong> הראשי מציג את כל 4 החלופות, וכל חלופה נמצאת בתיקייה עצמאית משלה.</div>
+  </div>
+</body>
+</html>
